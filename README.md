@@ -1,4 +1,5 @@
 # nilmiru
+![CI](https://img.shields.io/github/actions/workflow/status/speed1313/nilmiru/go.yml?branch=main&label=test)
 
 nilmiru is a static analysis tool that detects nil check leakage in function.
 
