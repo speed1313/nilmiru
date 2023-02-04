@@ -21,6 +21,9 @@ var Analyzer = &analysis.Analyzer{
 }
 
 func run(pass *analysis.Pass) (any, error) {
+	if pass == nil {
+		return nil, nil
+	}
 	inspect := pass.ResultOf[inspect.Analyzer].(*inspector.Inspector)
 	pointerVarList := []types.Object{}
 	varIsCheckedTable := map[types.Object]bool{}

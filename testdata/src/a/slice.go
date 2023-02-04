@@ -19,5 +19,12 @@ func slice_valid_len(s []string) bool{
 		return true
 	}
 	return false
+}
 
+func slice_valid_range(s []string) bool{
+	for i := range s{ // want "nil check leakage"
+		s[i] = "a" // want "nil check leakage"
+		return true
+	}
+	return false
 }
